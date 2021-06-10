@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li class="apple">Apple</li>
+      <li class="banana">Banana</li>
+      <li class="orange">Orange</li>
+    </ul>
+  </body>
+  <script>
+    const $fruits = document.getElementById("fruits");
+
+    const { firstChild } = $fruits;
+    console.log(firstChild);
+
+    const { nextSibling } = firstChild;
+    console.log(nextSibling);
+
+    const { previousSibling } = nextSibling;
+    console.log(previousSibling);
+
+    const { firstElementChild } = $fruits;
+    console.log(firstElementChild);
+
+    const { nextElementSibling } = firstElementChild;
+    console.log(nextElementSibling);
+
+    const { previousElementSibling } = nextElementSibling;
+    console.log(previousElementSibling);
+  </script>
+</html>

@@ -1,0 +1,4 @@
+const { size } = new Set([1, 2, 3, 3]);
+console.log(size);
+
+console.log(Object.getOwnPropertyDescriptor(Set.prototype, 'size'));
