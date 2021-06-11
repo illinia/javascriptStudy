@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: antiquewhite;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">Hello World</div>
+    <script>
+      const $box = document.querySelector(".box");
+
+      console.log($box.className);
+      console.log($box.classList);
+
+      $box.className = $box.className.replace("red", "blue");
+      $box.classList.add("foo");
+      $box.classList.add("bar", "baz");
+
+      $box.classList.remove("foo");
+      $box.classList.remove("bar", "baz");
+      $box.classList.remove("x");
+
+      console.log($box.classList.item(0));
+      console.log($box.classList.item(1));
+
+      $box.classList.replace("blue", "red");
+
+      $box.classList.toggle("foo", true);
+      $box.classList.toggle("foo", false);
+
+      console.log($box.classList);
+    </script>
+  </body>
+</html>

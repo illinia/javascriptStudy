@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="user" value="ungmo2" />
+    <script>
+      const { attributes } = document.getElementById("user");
+      console.log(attributes);
+
+      console.log(attributes.id.value);
+      console.log(attributes.type.value);
+      console.log(attributes.value.value);
+
+      const $input = document.getElementById("user");
+
+      const inputValue = $input.getAttribute("value");
+      console.log(inputValue);
+
+      $input.setAttribute("value", "foo");
+      console.log($input.getAttribute("value"));
+
+      $input.value = "foo1";
+
+      if ($input.hasAttribute("value")) {
+        $input.removeAttribute("value");
+      }
+
+      console.log($input.hasAttribute("value"));
+    </script>
+  </body>
+</html>
